@@ -7,19 +7,15 @@ def customFieldManager = ComponentAccessor.getCustomFieldManager()
 
 def epicstatus = customFieldManager.getCustomFieldObjectByName("Epic Status")
 def epicvalue = issue.getCustomFieldValue(epicstatus)
-def issueTypeField = customFieldManager.getCustomFieldObjectByName("Issue Type")
-def issueTypeValue = issue.getCustomFieldValue(issueTypeField)
+
 def fieldConfig = epicstatus.getRelevantConfig(issue)
 
 def option = optionsManager.getOptions(fieldConfig).getOptionForValue("In Progress", null)
 
-if (issueTypeValue == "Epic") {
-issue.setCustomFieldValue(epicstatus, option)
+if (epicvalue != null) {
+    issue.setCustomFieldValue(epicstatus, option)
+    log.info("Epic Status has been set...")
 }
-//if (epicvalue != "In Progress") {
-//    issue.setCustomFieldValue(epicstatus, [option])
-//    log.warn("Epic Status has been set...")
-//}
-//else {
-//    log.warn("Unable to set the Epic Status")
-//}   
+else {
+    log.warn("Unable to set the Epic Status")
+}
