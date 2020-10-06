@@ -67,7 +67,7 @@ if (parentIssue) {
         if (!parentIssue || !initOrderParent) {
             // Clear Initiative Order if exists
             if (subContextIssue == false) {
-                log.info("Initiative Order is cleared as this issue is Deleted")
+                log.info("Initiative Order is cleared as this issue" + contextIssue.getKey() + " is Deleted")
             }
             else if (initOrder) {
                 initOrderField.updateValue(null, contextIssue, new ModifiedValue(initOrder, null), new DefaultIssueChangeHolder())
