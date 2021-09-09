@@ -1,5 +1,5 @@
 # GroovyScript
-A Repo of Groovy Scripts for Atlassian Server. Script Runner Add-on required to execute the below scripts.
+A repo of groovy scripts for Atlassian server and cloud. Scriptrunner add-on required to execute the below scripts.
 
 ## Behaviour Scripts
 * [allowEpic.groovy](https://github.com/princenyeche/GroovyScript/blob/master/allowEpic.groovy) - Allow user to create issue type if in allowed list
@@ -13,3 +13,6 @@ A Repo of Groovy Scripts for Atlassian Server. Script Runner Add-on required to 
 
 ## Listener Scripts
 * [updateIssueOrderIssueLink.groovy](https://github.com/princenyeche/GroovyScript/blob/master/updateIssueOrderIssueLink.groovy) - A Listener used to update custom field
+
+## UpdateFieldValue - Listener Scripts for cloud
+* [updateFieldValue.groovy](https://github.com/princenyeche/GroovyScript/blob/master/updateFieldValue.groovy) - A Listener script used to update a custom field value with another value.
